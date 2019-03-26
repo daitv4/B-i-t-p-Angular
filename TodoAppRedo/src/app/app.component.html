@@ -1,0 +1,23 @@
+
+<div class="container">
+  <div style="text-align: center">
+    <h1>Todo Lists</h1>
+    <h3>Enter text into input field to add items to your list.</h3>
+    <h3>Click the itemto mark it as complate.</h3>
+    <h3>Click the X to remove the item from your list.</h3>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <div>
+          <app-input (addTodo)="addTodoParent($event)"></app-input>
+        </div>
+        <ul style="margin-top: 20px;">
+          <app-list [arrTodo]="arr" (changeTodo)="changeStatus($event)" (deleteTd)="deleteTodo($event)"></app-list>
+        </ul>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+
+</div>

@@ -1,0 +1,46 @@
+<div class="container">
+  <h1>A simple web app</h1>
+  <div class="row">
+    <span class="col-md-1">OrderBy</span>
+    <div class="col-md-3">
+      <select class="form-control" name="select" [(ngModel)]="select">
+        <option value="null">Select field to soft</option>
+        <option value="id">Id</option>
+        <option value="firstName">First Name</option>
+        <option value="lastName">Last Name</option>
+        <option value="email">Email</option>
+        <option value="birthday">Birthday</option>
+        <option value="salary">Salary</option>
+      </select>
+    </div>
+  </div>
+
+  <div style="margin-top: 30px;">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Gender</th>
+          <th>Birthday</th>
+          <th>Salary</th>
+          <th>Phone</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of data | sortPipe: select">
+          <td>{{item.id}}</td>
+          <td>{{item.firstName}}</td>
+          <td>{{item.lastName}}</td>
+          <td>{{item.email}}</td>
+          <td>{{item.gender}}</td>
+          <td>{{ item.birthday | date: 'dd/MM/yyyy' }}</td>
+          <td>{{item.salary}}</td>
+          <td>{{item.phone | phoneNumber}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

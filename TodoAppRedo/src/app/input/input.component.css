@@ -1,0 +1,13 @@
+.input-todo {
+    display: inline;
+    width: 300px;
+}
+
+.button-add {
+    color: black;
+    background-color: white;
+    border-color: #ced4da;
+    border-radius: 5px;
+    border-width: 1px;
+    padding: 5.5px;
+}
