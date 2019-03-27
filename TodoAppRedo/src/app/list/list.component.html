@@ -1,7 +1,0 @@
-<ul style="margin-top: 20px;">
-  <li *ngFor="let item of arrTodo">
-    <div>
-      <app-item [itemTodo] = "item" (changeStatus)="changeStatus($event)" (deleteTodo)="deleteTodo($event)"></app-item>
-    </div>
-  </li>
-</ul>

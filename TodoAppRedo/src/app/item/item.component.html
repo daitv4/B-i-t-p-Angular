@@ -1,8 +1,0 @@
-<button
-  class="btn-item-todo-false"
-  [ngClass]="{ 'btn-item-todo-true': itemTodo.status === true }"
-  (click)="btnChangeStatus()"
->
-  Task Name: {{ itemTodo.name }}: {{ itemTodo.status }}
-</button>
-<button class="btn-delete" (click)="btnDeleteTodo()">Delete</button>
