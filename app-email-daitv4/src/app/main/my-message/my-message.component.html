@@ -1,0 +1,19 @@
+<div style="height: 200px;">
+  <div class="row">
+    <div style="width: 10%;">
+      <ul class="list-folder">
+        <li style="list-style-type: none;" *ngFor="let item of folders" [class.select-item]="item === selectedFolder"
+          (click)="onSelect(item)">
+          <a><i
+              [ngClass]="{'fa': true, 'fa-folder-open-o': item === selectedFolder, 'fa-folder-o' : item !== selectedFolder}"
+              aria-hidden="true"></i> {{item}}</a></li>
+      </ul>
+    </div>
+    <div class="scroll" style="width: 89%; padding-left: 30px;">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+<div>
+  <router-outlet name="details"></router-outlet>
+</div>

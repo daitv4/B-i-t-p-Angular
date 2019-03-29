@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-sm navbar-detail">
+  <ul class="navbar-nav">
+    <li class="nav-item active">
+      <div>
+        <p><b>{{message.subject}}</b> <br>{{message.from}}</p>
+      </div>
+    </li>
+  </ul>
+  <ul class="navbar-nav ml-auto">
+    <div>
+      {{message.date | date: 'MMMM dd, yyyy h:mm:ss a'}} <br>
+      <button class="btn btn-primary button-details"><i class="fa fa-reply"></i> Reply</button>
+      <button class="btn btn-primary button-details"><i class="fa fa-forward"></i> Forward</button>
+      <button class="btn btn-primary button-details"><i class="fa fa-close"></i> Delete</button>
+    </div>
+  </ul>
+</nav>
+<div class="content">
+  {{message.body}}
+</div>

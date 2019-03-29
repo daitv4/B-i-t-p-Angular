@@ -1,0 +1,44 @@
+<div>
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#messages">Messages</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#contacts">Contacts</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#preferences">Preferences</a>
+    </li>
+
+    <li class="dropdown ml-auto">
+      <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+        {{username}}
+      </button>
+      <div class="dropdown-menu">
+        <button class="dropdown-item" (click)="logout()">Logout</button>
+      </div>
+    </li>
+
+    <li class="nav-item">
+      <button class="btn btn-primary" style="margin-top: 1px; margin-right: 5px;"><i class="fa fa-home"></i></button>
+    </li>
+
+    <li class="nav-item">
+      <button class="btn btn-primary" style="margin-right: 15px; margin-top: 1px;"><i class="fa fa-envelope"></i> New Message</button>
+    </li>
+
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div id="messages" class="tab-pane active">
+      <router-outlet></router-outlet>
+    </div>
+    <div id="contacts" class="tab-pane fade">
+      <h3>Contact</h3>
+    </div>
+    <div id="preferences" class="tab-pane fade">
+      <h3>Preferences</h3>
+    </div>
+  </div>
+</div>

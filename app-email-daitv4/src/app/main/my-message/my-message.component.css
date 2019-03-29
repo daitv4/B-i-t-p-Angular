@@ -1,0 +1,23 @@
+.list-folder {
+    background-color: #dddddd;
+    display: inline-block;
+    margin-left: -10px;
+    height: 200px;
+}
+
+.list-folder .item {
+    color: black;
+    text-decoration: none;
+}
+
+.select-item {
+    background-color: #6495ed !important;
+    color: white;
+    width: 110px;
+    padding-left: 15px;
+}
+
+div.scroll {
+    height: 200px;
+    overflow: auto;
+}

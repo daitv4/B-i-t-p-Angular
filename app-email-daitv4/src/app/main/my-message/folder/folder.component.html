@@ -1,0 +1,16 @@
+<table style="width: 100%;">
+  <thead>
+    <tr>
+      <th style="width: 30%;">Sender</th>
+      <th style="width: 50%;">Subject</th>
+      <th style="width: 20%;">Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of messages" [routerLink]="['/email/mymessage', { outlets: { details: [item._id] } }]" (click)="selectItem(item._id)" [ngClass]="{'selected-item': selectedItem === item._id}" >
+      <td style="width: 30%;">{{item.from | slice: 0 : 35}}</td>
+      <td style="width: 50%;">{{item.subject | slice: 0 : 80}}</td>
+      <td style="width: 20%;">{{item.date | date: 'dd/MM/yyyy'}}</td>
+    </tr>
+  </tbody>
+</table>
