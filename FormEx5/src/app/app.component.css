@@ -1,0 +1,18 @@
+.buttom {
+    background-color: #444857;
+    border-radius: 4px;
+    padding: 7px 16px;
+    border: 3px solid #444857;
+    font-size: 1rem;
+    color: white;
+    margin: 0px 10px 0px 0px;
+}
+
+.buttom-edit {
+    background: none; 
+}
+
+.buttom-SignUp {
+    background-color: #47cf73;
+    border: solid #47cf73;
+}

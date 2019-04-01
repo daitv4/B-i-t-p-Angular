@@ -1,0 +1,38 @@
+.content {
+    background-color: white;
+    border-radius: 4px;
+    margin-top: 20px;
+    text-align: center;
+    padding: 30px;
+}
+
+.labels {
+    display: inline-block;
+    text-align: right;
+    width: 40%;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.rightTab {
+    display: inline-block;
+    text-align: left;
+    width: 48%;
+}
+
+.radio {
+    position: relative;
+    left: -43px;
+    margin-left: 10px;
+    display: block;
+    padding-bottom: 10px;
+}
+
+.checkbox {
+    margin-left: -40px;
+}
+
+.error-message {
+    color: red;
+    margin-top: -20px;
+}
