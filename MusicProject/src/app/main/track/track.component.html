@@ -1,0 +1,6 @@
+<div *ngFor="let item of tracks">
+  <p style="color: white">{{ item.name }}</p>
+  <audio controls>
+    <source src="{{ item.preview_url }}" type="audio/mpeg" />
+  </audio>
+</div>
