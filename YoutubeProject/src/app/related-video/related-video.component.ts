@@ -18,6 +18,6 @@ export class RelatedVideoComponent implements OnInit {
   }
 
   onClickItem(item: Video) {
-    this.router.navigateByUrl('/youtube/' + item.id.videoId);
+    this.router.navigateByUrl('/youtube/watch/' + item.id.videoId);
   }
 }
