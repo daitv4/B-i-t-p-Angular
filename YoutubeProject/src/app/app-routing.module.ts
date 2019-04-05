@@ -7,7 +7,7 @@ import { VideoDetailsComponent } from './video-details/video-details.component';
 const routes: Routes = [
   { path:'youtube', component: SearchComponent, children: [
     { path: 'search/:key', component: ListVideoComponent },
-    { path: ':id', component: VideoDetailsComponent }
+    { path: 'watch/:id', component: VideoDetailsComponent }
   ] },
   { path: '', redirectTo: 'youtube/search/', pathMatch: 'full'}
 ];
