@@ -1,0 +1,24 @@
+  <nav class="navbar navbar-expand-sm navbar-dark">
+    <!-- Brand/logo -->
+    <h1 class="navbar-brand"
+            style="color: red; cursor: pointer; font-size: 30px"
+            (click)="homeClick()"
+          >
+            FATube
+          </h1>
+    
+    <!-- Links -->
+    <ul class="navbar-nav mx-auto">
+        <div [ngStyle]="{'width': width + 'px'}">
+          <form (ngSubmit)="onClick(keySearch.value)" style="width: 100%;">
+            <input class="input" type="text" placeholder="Tìm kiếm..." #keySearch />
+            <button class="button" type="submit">
+              <i class="fa fa-search"></i>
+            </button>
+          </form>
+        </div>
+    </ul>
+  </nav>
+  <div style="padding-top: 30px;">
+    <router-outlet></router-outlet>
+  </div>

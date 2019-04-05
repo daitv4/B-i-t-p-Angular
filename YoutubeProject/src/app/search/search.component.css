@@ -1,0 +1,13 @@
+.input {
+    width: 90%;
+    padding-left: 10px;
+}
+
+.button {
+    width: 10%;
+    background: none;
+    border: 1px solid #a9a9a9;
+    color: darkgray;
+    padding: 2px;
+    margin-left: -1px;
+}

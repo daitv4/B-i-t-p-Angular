@@ -1,0 +1,44 @@
+<div class="container">
+  <select
+    class="input-sort"
+    name=""
+    id=""
+    style="margin-left: 10px; margin-top: -20px;"
+    (change)="getVideos(valueSort.value)"
+    #valueSort
+  >
+    <option value="relevance">---Sắp xếp---</option>
+    <option value="title">Title</option>
+    <option value="viewCount">Lượt xem</option>
+    <option value="date">Thời gian</option>
+    <option value="rating">Rating</option>
+    <option value="videoCount">Số lượng vieo</option>
+  </select>
+  <hr />
+  <div class="item-video" *ngFor="let item of videos">
+    <div class="row" style="cursor: pointer" (click)="onClickItem(item)">
+      <div class="col-md-3">
+        <img
+          src="{{ item.snippet.thumbnails.medium.url }}"
+          alt=""
+          width="246"
+        />
+      </div>
+      <div class="col-md-6">
+        <p style="font-size: 18px;">{{ item.snippet.title }}</p>
+        <p style="font-size: 13px; margin-top: -10px;">
+          {{ item.snippet.channelTitle }}
+        </p>
+        <p style="font-size: 13px; margin-top: -10px;">
+          {{ item.snippet.description }}
+        </p>
+      </div>
+    </div>
+  </div>
+  <p
+    style="cursor: pointer; text-align: center; margin-top: 30px;"
+    (click)="onClickPage()"
+  >
+    Hiển thị thêm <i class="fa fa-caret-down" aria-hidden="true"></i>
+  </p>
+</div>
