@@ -36,7 +36,7 @@ export class ListVideoComponent implements OnInit {
   }
 
   onClickItem(video: Video) {
-    this.router.navigateByUrl('/youtube/' + video.id.videoId);
+    this.router.navigateByUrl('/youtube/watch/' + video.id.videoId);
   }
 
   onClickPage() {
